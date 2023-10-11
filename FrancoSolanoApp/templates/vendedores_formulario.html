@@ -1,0 +1,16 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <p> Documento: <input type = "number" name="documentoVendedor">
+    <p> Nombre: <input type = "text" name="nombreVendedor">
+    <p> Apellido: <input type = "text" name="apellidoVendedor">
+    <input type = "submit" value="Enviar">
+</form>   
+</body>
+</html>
+{% endblock %}

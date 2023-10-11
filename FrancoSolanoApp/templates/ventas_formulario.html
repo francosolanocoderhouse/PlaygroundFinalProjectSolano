@@ -1,0 +1,16 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <p> Fecha: <input type = "date" name="fechaVenta">
+    <p> Monto: <input type = "number" name="montoVenta">
+    <p> Documento Vendedor: <input type = "number" name="documentoVendedor">
+    <input type = "submit" value="Enviar">
+</form>   
+</body>
+</html>
+{% endblock %}

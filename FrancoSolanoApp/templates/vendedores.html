@@ -1,0 +1,35 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+    <h1>Buscar vendedor por documento</h1>
+    <h3>Se pueden ver las ventas por vendedor</h3>
+    <br>
+<!-- Buscar vendedores -->
+    {% if miFormulario.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+    <form action="buscar" method="GET">
+
+        <input type="number" name="documento" id="documento">
+    
+        <input type="submit" value="Buscar">
+    
+    </form>
+
+    <p> Estamos buscando las ventas del vendedor número: {{documento}}</p>
+    <br>
+    {% if ventas %}
+    <ul>
+    {% for venta  in ventas %}
+        <li>Fecha: {{venta.fecha}} Monto: {{venta.monto}} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+
+{% endblock %}

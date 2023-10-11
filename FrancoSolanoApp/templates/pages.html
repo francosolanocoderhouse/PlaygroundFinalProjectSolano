@@ -1,0 +1,23 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<body>
+
+<h2>Páginas del blog</h2>
+<a href="{% url 'Inicio' %}">Inicio</a>
+<br>
+<a href="{% url 'Vendedores' %}">Vendedores</a>
+<br>
+<a href="{% url 'editarperfil' %}">Editar Perfil</a>
+<br>
+<a href="{% url 'vendedores_formulario' %}">Registrar Vendedor</a>
+<br>
+<a href="{% url 'about' %}">Sobre el autor</a>
+
+    
+
+</body>
+</html>
+{% endblock %}

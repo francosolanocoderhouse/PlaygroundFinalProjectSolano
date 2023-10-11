@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<body>
+<h3>Puede registrar un cliente frecuente desde aquí</h3>
+<form action="" method="post">
+    {% csrf_token %}
+    <p> Nombre: <input type = "text" name="nombreCliente">
+    <p> Apellido: <input type = "text" name="apellidoCliente">
+    <p> Número cliente: <input type = "number" name="numeroCliente">
+    <input type = "submit" value="Enviar">
+</form>   
+</body>
+</html>
+{% endblock %}
