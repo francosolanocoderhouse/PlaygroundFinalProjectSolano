@@ -2,6 +2,7 @@ from django.urls import path
 from FrancoSolanoApp import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
    
@@ -17,6 +18,7 @@ urlpatterns = [
     path('cambiarcontrasena', views.cambiarcontrasena.as_view,name="cambiarcontrasena"),
     path('pages', views.pages,name="pages"),
     path('login', views.login_request,name="login"),
+    path('logout', LogoutView.as_view(template_name='logout.html'), name='logout'),
     path('registro', views.registro,name="registro")
 ]
 

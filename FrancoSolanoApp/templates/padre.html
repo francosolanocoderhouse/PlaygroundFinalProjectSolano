@@ -30,6 +30,7 @@
                 <a class="btn btn-primary" href="{% url 'registro' %}">Registro</a>
                 {% else %}
                 <a class="navbar-brand" href="#">{{request.user.username}}</a>
+                <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
                 {% endif %}
                 
                 
